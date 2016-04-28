@@ -4,8 +4,11 @@ var port    = 3000;
 
 var app = express();
 
-// Implement your route here!
+var router = express.Router();
+var routes = require('./routes/index');
+app.use('/', routes);
 
-app.listen(port);
-
-console.log("Listening on port: " + port.toString());
+var server = app.listen(3000, function () {
+  var port = server.address().port;
+});
+module.exports = server;

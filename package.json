@@ -4,11 +4,19 @@
   "description": "A small coding challenge to implement an API route that returns fibonacci numbers",
   "main": "server.js",
   "dependencies": {
-    "express": "^4.13.4"
+    "express": "^4.13.4",
+    "redis":"",
+    "webworker-threads":"",
+    "nodemon":""
+    
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "mocha": "*",
+    "chai": "*",
+    "supertest": ""
+    },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node ./node_modules/mocha/bin/mocha",
     "start": "node server.js"
   },
   "repository": {

@@ -42,4 +42,19 @@ The spec is as follows:
 
 
 ### Solution Discussion:
-- Your solution explanation goes here.
+
+
+- Considering the time it takes to compute the fibonacci numbers as n increases, i have set a limit on n to 45. I did this in part to use my time to work on other details like caching, automated tests etc. I used a single thread to compute the fibonacci number. This approach was faster than using just a standalone method.
+
+- I used Redis to implement caching. These are the links i referred for set up -
+http://jasdeep.ca/2012/05/installing-redis-on-mac-os-x/
+http://redis.io/topics/quickstart
+
+- The method to generate the fibonacci number is only hit when it is not found in the cache. When the method gets called and a new fibonacci number id generated, it is stored in the cache with n as key.
+
+- Iterative and recursive methods have been implemented.
+
+- 5 Automated tests using Mocha, Chai and SuperTest.
+
+- There are other more effective approaches to generate bigger fibonacci numbers. Those needed multithreading, which might take more time to implement with my comparatively new node.js skills. 
+
